@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/action_post">
+
+    <fragment
+        android:id="@+id/action_post"
+        android:name="com.fernandez.rico.jetpatck.ui.main.tabs.PostFragment"
+        android:label="@string/post_list"
+        tools:layout="@layout/fragment_post"
+        />
+    <fragment
+        android:id="@+id/action_users"
+        android:name="com.fernandez.rico.jetpatck.ui.main.tabs.UserFragment"
+        android:label="@string/user_list"
+        tools:layout="@layout/fragment_user"/>
+    <fragment
+        android:id="@+id/action_photos"
+        android:name="com.fernandez.rico.jetpatck.ui.main.tabs.PhotosFragment"
+        android:label="@string/photo_list"
+        tools:layout="@layout/fragment_photo"/>
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="com.fernandez.rico.jetpatck.ui.post.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings"/>
+</navigation>

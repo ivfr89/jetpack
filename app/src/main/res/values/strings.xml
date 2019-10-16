@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Android Jetpack</string>
+    <string name="posts">Posts</string>
+    <string name="users">Users</string>
+    <string name="photos">Photos</string>
+    <string name="settings">Settings</string>
+
+
+
+
+
+
+    <!-- BOTTOM NAVIGATION -->
+    <string name="post_list">Post list</string>
+    <string name="user_list">User list</string>
+    <string name="photo_list">Photo list</string>
+
+    <!--COMMON STRINGS-->
+    <string name="username">\@%1$s</string>
+    <string name="address">%1$s, %2$s</string>
+
+    <!--ERRORS-->
+    <string name="connectivity_error">Without connectivity</string>
+
+
+</resources>

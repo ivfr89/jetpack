@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.1"
+    defaultConfig {
+        applicationId "com.fernandez.rico.jetpatck"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [
+                        "room.incremental":"true"]
+
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+
+}
+
+dependencies {
+    def mainAppDependencies = rootProject.ext.mainApplication
+    def androidX = rootProject.ext.androidX
+
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation mainAppDependencies.kotlin
+
+
+    implementation androidX.appCompat
+    implementation androidX.ktx
+    implementation androidX.constraintLayout
+    implementation androidX.viewmodel
+    implementation androidX.paging
+    implementation androidX.cardview
+    implementation androidX.room
+    kapt androidX.roomKapt
+    implementation androidX.roomKtx
+
+
+    implementation mainAppDependencies.koin
+    implementation androidX.navigationFragment
+    implementation androidX.navigation
+
+    implementation mainAppDependencies.retrofit
+    implementation mainAppDependencies.converterGson
+    implementation mainAppDependencies.converterScalars
+    implementation mainAppDependencies.glide
+
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
