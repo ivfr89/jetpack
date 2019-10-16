@@ -1,4 +1,4 @@
-# Kotlin Android Clean Architecture + MVVM + Coroutines + Jetpack (Room, Paging Library, Navigation) + Koin
+# Kotlin Android Clean Architecture + MVVM + Coroutines + Jetpack (ViewModel, Room, Paging Library, Navigation) + Koin
 
 Consumo de servicios API Rest en JSON a través de JSONPlaceholder (https://jsonplaceholder.typicode.com/) usando una arquitectura Clean
 y utilizando Jetpack como biblioteca para la carga de tres tipos de entidades; usuarios, posts y fotos. 
